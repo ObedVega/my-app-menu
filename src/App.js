@@ -10,7 +10,7 @@ import { Footer } from './components/foot';
 
 
 function App() {
-  return (
+  return ( 
     <div className="App">
       <Menu/>
       <header className="App-header">
