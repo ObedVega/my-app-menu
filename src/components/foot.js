@@ -1,5 +1,10 @@
 import React from "react";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons'
+const chev = <FontAwesomeIcon icon={faChevronCircleUp} />
+ 
+ 
 
 export const Footer = () => {
   return (
@@ -46,8 +51,8 @@ export const Footer = () => {
         </ul>
       </div>
     </div>
-    <p class="float-end mb-1">
-      <a href="#top">Back to top</a>
+    <p className="float-end mb-1">
+      <a href="#top">{chev}</a>
     </p>
   </footer>  
   </div>

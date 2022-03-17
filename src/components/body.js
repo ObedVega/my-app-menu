@@ -1,12 +1,13 @@
 import React from "react";
+//import Container from 'react-bootstrap/Container';
+import { Cards } from "./card";
 
 export const Body = () => {
   return (
     <>
-    <div>
-        <h1>hola mundo</h1>
+    <div className="row  mt-3">
+        <Cards/>
     </div>
-    
     </>
   );
 };

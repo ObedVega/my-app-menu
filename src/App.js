@@ -7,15 +7,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Menu } from './components/navbar';
 import { Body } from './components/body';
 import { Footer } from './components/foot';
+import Container from 'react-bootstrap/Container';
 
 
 function App() {
   return ( 
     <div className="App">
       <Menu/>
-      <header className="App-header">
+      <Container>
         <Body/>
-      </header>
+      </Container>
       <Footer/>
     </div>
   );
