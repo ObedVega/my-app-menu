@@ -46,6 +46,9 @@ export const Footer = () => {
         </ul>
       </div>
     </div>
+    <p class="float-end mb-1">
+      <a href="#top">Back to top</a>
+    </p>
   </footer>  
   </div>
     </>
