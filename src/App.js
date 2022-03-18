@@ -12,7 +12,7 @@ import Container from 'react-bootstrap/Container';
 
 function App() {
   return ( 
-    <div className="App">
+    <div className="">
       <Menu/>
       <Container>
         <Body/>

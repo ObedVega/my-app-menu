@@ -5,9 +5,7 @@ import { Cards } from "./card";
 export const Body = () => {
   return (
     <>
-    <div className="row  mt-3">
         <Cards/>
-    </div>
     </>
   );
 };
