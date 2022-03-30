@@ -66,7 +66,8 @@ export const MenuBebidas = () => {
     return (
         <>
         <p></p>
-        <h1> Bebidas Tradicionales</h1>
+        
+
         <form>
             <div className="form-group">
                 <input className="form-control" onChange={handleChange} type="text" placeholder="Buscar"/>
@@ -75,13 +76,18 @@ export const MenuBebidas = () => {
             <Button onClick={onSubmit}>Buscar tu Bebida</Button>
         </form>
         <p></p>
-        <ul>
-              {
-                  bebidas.map((valor) => (
-                    <li key={valor}>{valor}</li>  
-                  ))
-              }
-          </ul>
+        <div class="card">
+            <div class="card-header">
+                <h1> Bebidas Tradicionales</h1>
+            </div>
+            <ul class="list-group list-group-flush">
+            {
+                bebidas.map((valor) => (
+                    <li className="list-group-item" key={valor}>{valor}</li>  
+                ))
+            }
+            </ul>
+        </div>
         </>
     )
 };
