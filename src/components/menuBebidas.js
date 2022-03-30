@@ -1,4 +1,7 @@
 import React, {useState} from "react";
+import 'bootstrap/dist/css/bootstrap.css';
+import { Button } from "react-bootstrap";
+ 
 
 export const MenuBebidas = () => {
     let listaDeBebidas = [
@@ -50,6 +53,7 @@ export const MenuBebidas = () => {
     const [bebidas, setBebidas] = useState(listaDeBebidas);    
     const [buscarTexto, setbuscarTexto] = useState("");  
     const handleChange = (event) => {
+        console.log(event.target.value);
         setbuscarTexto(event.target.value);
     };
     
@@ -61,18 +65,23 @@ export const MenuBebidas = () => {
     }
     return (
         <>
+        <p></p>
         <h1> Bebidas Tradicionales</h1>
         <form>
-          <input onChange={handleChange} type="text" placeholder="Buscar"/>
-          <button onClick={onSubmit}>Buscar tu Bebida</button>
-          <ul>
+            <div className="form-group">
+                <input className="form-control" onChange={handleChange} type="text" placeholder="Buscar"/>
+            </div>
+            <p></p>
+            <Button onClick={onSubmit}>Buscar tu Bebida</Button>
+        </form>
+        <p></p>
+        <ul>
               {
                   bebidas.map((valor) => (
                     <li key={valor}>{valor}</li>  
                   ))
               }
           </ul>
-        </form>
         </>
     )
 };

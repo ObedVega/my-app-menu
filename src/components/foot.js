@@ -21,7 +21,7 @@ export const Footer = () => {
             height="30"/>
         <small className="d-block mb-3 text-muted">© 2022</small>
       </div>
-      <div className="col-6 col-md">
+      {/*<div className="col-6 col-md">
         <h5>Features</h5>
         <ul className="list-unstyled text-small">
           <li className="mb-1"><a className="link-secondary text-decoration-none" href="#a">Cool stuff</a></li>
@@ -49,8 +49,8 @@ export const Footer = () => {
           <li className="mb-1"><a className="link-secondary text-decoration-none" href="#a">Privacy</a></li>
           <li className="mb-1"><a className="link-secondary text-decoration-none" href="#a">Terms</a></li>
         </ul>
-      </div>
-    </div>
+      </div>*/}
+  </div>
     <p className="float-end mb-1">
       <a href="#top">{chev}</a>
     </p>
