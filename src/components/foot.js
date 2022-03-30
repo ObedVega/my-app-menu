@@ -1,8 +1,8 @@
 import React from "react";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons'
 const chev = <FontAwesomeIcon icon={faChevronCircleUp} />
+
  
  
 
@@ -15,11 +15,11 @@ export const Footer = () => {
       <div className="col-12 col-md">
         <img 
             className="mb-2" 
-            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" 
+            src="https://raw.githubusercontent.com/ovvake/my-app-menu/dev/src/img/logo.png"
             alt="" 
             width="30" 
             height="30"/>
-        <small className="d-block mb-3 text-muted">© 2022</small>
+        <small className="d-block mb-3 text-muted">RARA Urban Cafe © 2022</small>
       </div>
       {/*<div className="col-6 col-md">
         <h5>Features</h5>
