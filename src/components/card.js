@@ -1,13 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 //import Card from 'react-bootstrap/Card';
-//import Button from "react-bootstrap/Button";
+import Button from "react-bootstrap/Button";
+import Modal from 'react-bootstrap/Modal';
+
+
 import late from '../img/late.png';
 import dirtychai from '../img/DirtyChaiEspecias.png';
 import keto from '../img/KetoCitrusCoffee.png';
 import oreo from '../img/FrappeOreo.png';
  
 export const Cards = () => {
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
   return (
    <>
    <div className="row mt-3">
@@ -34,7 +42,28 @@ export const Cards = () => {
             <div className="card-body">
             <h4 className="card-title">Dirty Chai Especias</h4>
             <p className="card-text">$ 60 mx</p>
-            <a href="#z" className="btn btn-primary">See Profile</a>
+            <Button variant="primary" onClick={handleShow}>
+                Launch demo modal
+            </Button>
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title>Modal heading</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                    Close
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                    Save Changes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
             </div>
         </div>
     </div>
