@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import 'bootstrap/dist/css/bootstrap.css';
-//import { Button } from "react-bootstrap";
+import '../css/style.css'
+import { Button } from "react-bootstrap";
 
  
 
@@ -32,24 +33,35 @@ export const MenuBebidas = () => {
     */
   
   const listaDeBebidas = [
-            "Espresso",
-            "Espresso Americano",
-            "Cortado",
-            "Capuccino",
-            "Latte",
-            "Menta",
-            "Toronja",
-            "Lavanda",
-            "Frambuesa",
-            "Miel con Romero",
-            "Rompope",
-            "Salvia",
-            "Caramelo",
-            "Pistache",
-            "Vainilla",
-            "Chocolate",
-            "Horchata",
-            "Chai Especias"
+        "Bebidas Tradicionales",
+        "Espresso",
+        "Espresso Americano",
+        "Cortado",
+        "Capuccino",
+        "Latte",
+        "Lattes Saborizados",
+        "Menta",
+        "Toronja",
+        "Lavanda",
+        "Frambuesa",
+        "Miel con Romero",
+        "Rompope",
+        "Salvia",
+        "Caramelo",
+        "Pistache",
+        "Vainilla",
+        "Alternativas",
+        "Chocolate",
+        "Horchata",
+        "Chai Especias",
+        "Te y Tisanas",
+        "Dark Velvet",
+        "Choco Ear Gray",
+        "Masala Chai","Matcha Blend","Tisana frutos del bosque","Tisana frutos exoticos",
+        "Limonadas",
+        "Limonada Matcha","Limonada Lavanda","Limonada Salvia",
+        "Frappes",
+        "Frappe Caramelo","Frappe Chai","Frappe Horchata","Frappe Oreo"
         ]
 /*
     const listaDeBebidas_2 = [
@@ -91,7 +103,7 @@ export const MenuBebidas = () => {
             "bebidas":[{"tipo":"Capuccino"},{"tipo":"Latte"},{"tipo":"Menta"}]
         }
     ]
-    */
+    *//*
     const data = {"results": [
         {
             "data":{
@@ -122,7 +134,7 @@ export const MenuBebidas = () => {
             }
         }
     ]
-};
+};*/
     //console.log(data.results);
     //const [bebidas2, setBebidas2] = useState(listaDeBebidas_2);
     
@@ -148,26 +160,35 @@ export const MenuBebidas = () => {
 
         <form>
             <div className="form-group">
-                <input className="form-control" onChange={handleChange} onInput={onSubmit} type="text" placeholder="Buscar"/>
+                <input className="form-control" onChange={handleChange} type="text" placeholder="Buscar"/>
             </div>
             <p></p>
-            {/*<Button onClick={onSubmit}>Buscar tu Bebida</Button>*/} 
+            <Button onClick={onSubmit}>Buscar tu Bebida</Button>
         </form>
         <p></p>
         <div className="card">
-            <div className="card-header">
-                <h1> Bebidas Tradicionales</h1>
+            <div className="card-header bg-black text-white">
+                <h1> Menu</h1>
             </div>
             <ul className="list-group list-group-flush">
             {
                 bebidas.map((valor) => (
-                    <li className="list-group-item" key={valor}>{valor}</li>  
+                    <li className={
+                       (valor === 'Bebidas Tradicionales') ? 'list-group-item pink text_bold' :
+                       (valor === 'Lattes Saborizados') ? 'list-group-item pink text_bold' : 
+                       (valor === 'Alternativas') ? 'list-group-item pink text_bold' :
+                       (valor === 'Te y Tisanas') ? 'list-group-item pink text_bold' :
+                       (valor === 'Limonadas') ? 'list-group-item pink text_bold' :
+                       (valor === 'Frappes') ? 'list-group-item pink text_bold' :
+                       'list-group-item text'
+                  } key={valor}>{valor}</li>  
+       
                 ))
             }
             </ul>
         </div>
         
-        {
+        {/*
             data.results.map((valor)=>(
                 <><p ></p>
                 <div className="card" key={valor.data.id}>
@@ -183,7 +204,7 @@ export const MenuBebidas = () => {
                 </div></>
             
             ))
-        }
+                        */}
         </>
     )
 };
