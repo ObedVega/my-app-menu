@@ -174,12 +174,12 @@ export const MenuBebidas = () => {
             {
                 bebidas.map((valor) => (
                     <li className={
-                       (valor === 'Bebidas Tradicionales') ? 'list-group-item pink text_bold' :
-                       (valor === 'Lattes Saborizados') ? 'list-group-item pink text_bold' : 
-                       (valor === 'Alternativas') ? 'list-group-item pink text_bold' :
-                       (valor === 'Te y Tisanas') ? 'list-group-item pink text_bold' :
-                       (valor === 'Limonadas') ? 'list-group-item pink text_bold' :
-                       (valor === 'Frappes') ? 'list-group-item pink text_bold' :
+                       (valor === 'Bebidas Tradicionales') ? 'list-group-item  text_bold' :
+                       (valor === 'Lattes Saborizados') ? 'list-group-item  text_bold' : 
+                       (valor === 'Alternativas') ? 'list-group-item  text_bold' :
+                       (valor === 'Te y Tisanas') ? 'list-group-item  text_bold' :
+                       (valor === 'Limonadas') ? 'list-group-item  text_bold' :
+                       (valor === 'Frappes') ? 'list-group-item  text_bold' :
                        'list-group-item text'
                   } key={valor}>{valor}</li>  
        
